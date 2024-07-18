@@ -69,7 +69,7 @@ const ProductDetails = () => {
                         <Text>Adicionar ao Pedido</Text>
                     </Button>
 
-                    <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+                    <TouchableOpacity onPress={() => router.back()}>
                         <Text style={styles.textBackButton}>Voltar ao Cardápio</Text>
                     </TouchableOpacity>
                 </View>

@@ -52,9 +52,6 @@ const styles = StyleSheet.create({
         marginTop: 2,
         gap: 10
     },
-    backButton: {
-
-    },
     textBackButton: {
         color: theme.colors.gray
     },

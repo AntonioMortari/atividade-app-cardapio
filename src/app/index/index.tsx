@@ -8,6 +8,7 @@ import { MENU } from '@/data/products';
 import { useRef, useState } from 'react';
 import { styles } from './styles';
 import { ProductItem } from '@/components/ProductItem';
+import { Header } from '@/components/Header';
 
 const Index = () => {
 
@@ -32,7 +33,7 @@ const Index = () => {
     return (
         <View style={styles.container}>
 
-            <View style={styles.header}>
+            {/* <View style={styles.header}>
 
                 <View style={styles.containerImage}>
                     <Image
@@ -44,7 +45,12 @@ const Index = () => {
                 </View>
 
                 <Feather name="shopping-bag" size={24} color="white" />
-            </View>
+            </View> */}
+
+            <Header
+                title='Faça seu pedido'
+                showCart
+            />
 
             <Separator />
 
