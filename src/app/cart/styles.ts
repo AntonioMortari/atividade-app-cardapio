@@ -13,7 +13,24 @@ const styles = StyleSheet.create({
     containerItens: {
 
     },
+    containerTotal: {
+        flexDirection: 'row',
+        marginTop: 10
+    },
+    textTotal: {
+        color: theme.colors.white,
+        fontSize: theme.fonts.size.body.md,
+        fontFamily: theme.fonts.family.bold
+    },
+    total: {
+        color: theme.colors.secondary,
+        fontSize: theme.fonts.size.heading.md,
+        fontFamily: theme.fonts.family.bold
+    },
     price: {
+
+    },
+    pricePrimary: {
 
     },
     containerButtons: {

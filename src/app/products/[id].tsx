@@ -7,6 +7,8 @@ import { AntDesign } from '@expo/vector-icons';
 import { Button } from '@/components/Button';
 import { styles } from './styles';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const ProductDetails = () => {
     const { id } = useLocalSearchParams();
@@ -33,6 +35,18 @@ const ProductDetails = () => {
         if (product) setDataProduct(product);
 
     }, []);
+
+    const handleAddProductToCart = async (idProduct: string) => {
+        const prevDataString = await AsyncStorage.getItem('@Cart');
+
+        let prevData: string[] = [];
+
+        if(prevDataString){
+            prevData = JSON.parse(prevDataString);
+        }
+
+        await AsyncStorage.setItem('@Cart', JSON.stringify([...prevData, idProduct]));
+    }
 
 
     const formatNumber = (number: number) => {
@@ -64,7 +78,7 @@ const ProductDetails = () => {
                 </View>
 
                 <View style={styles.containerButtons}>
-                    <Button style={styles.button}>
+                    <Button style={styles.button} onPress={() => handleAddProductToCart(dataProduct.id)}>
                         <AntDesign name="pluscircleo" size={24} color="black" />
                         <Text>Adicionar ao Pedido</Text>
                     </Button>
