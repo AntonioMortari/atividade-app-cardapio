@@ -11,21 +11,23 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     containerItens: {
+        maxHeight: 300
 
     },
     containerTotal: {
         flexDirection: 'row',
-        marginTop: 10
+        marginTop: 20,
+        alignItems: 'center'
     },
     textTotal: {
         color: theme.colors.white,
-        fontSize: theme.fonts.size.body.md,
-        fontFamily: theme.fonts.family.bold
+        fontSize: theme.fonts.size.heading.md,
+        
     },
     total: {
         color: theme.colors.secondary,
-        fontSize: theme.fonts.size.heading.md,
-        fontFamily: theme.fonts.family.bold
+        fontSize: theme.fonts.size.heading.lg,
+        fontWeight: 'semibold',
     },
     price: {
 
@@ -50,6 +52,12 @@ const styles = StyleSheet.create({
     textBackButton: {
         color: theme.colors.gray
     },
+    alertMessage:{
+        color: theme.colors.gray,
+        fontSize: theme.fonts.size.heading.lg,
+        marginVertical: 20,
+        textAlign: 'center'
+    }
 });
 
 export { styles };

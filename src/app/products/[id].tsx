@@ -46,6 +46,8 @@ const ProductDetails = () => {
         }
 
         await AsyncStorage.setItem('@Cart', JSON.stringify([...prevData, idProduct]));
+
+        router.back();
     }
 
 
